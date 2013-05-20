@@ -12,7 +12,7 @@ plausibleStr regex1 regex2 words = format "{0} with a ratio of {1} ({2} / {3})"
         nPositive = nOccurences regex1
         nNegative = nOccurences regex2
         ratio = fromIntegral nPositive / fromIntegral nNegative
-        nOccurences regex = length $ filter (=~ regex) words where
+        nOccurences regex = length $ filter (=~ regex) words
 
 main = do
     words <- lines <$> getContents
