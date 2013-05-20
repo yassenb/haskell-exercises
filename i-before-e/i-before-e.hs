@@ -17,6 +17,6 @@ plausibleStr regex1 regex2 words = format "{0} with a ratio of {1} ({2} / {3})"
 main = do
     words <- lines <$> getContents
     putStrLn $ format
-        ("I before E when not preseded by C is {0}\n" ++
-        "E before I when preseded by C is {1}")
+        "I before E when not preseded by C is {0}\n\
+        \E before I when preseded by C is {1}"
         [plausibleStr "[^c]ie" "[^c]ei" words, plausibleStr "cei" "cie" words]
